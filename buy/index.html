@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapphire Accounts - Purchase</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="buy-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="wave-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="terminal-container compact">
+        <div class="terminal-header">
+            <div class="terminal-title">
+                <i class="fas fa-gem"></i> Sapphire Accounts - Purchase
+                <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+            <div class="terminal-buttons right">
+                <span class="btn close"><i class="fas fa-times"></i></span>
+                <span class="btn minimize"><i class="fas fa-minus"></i></span>
+                <span class="btn maximize"><i class="fas fa-expand"></i></span>
+            </div>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="purchase-header">
+                <div class="purchase-logo">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h1>Purchase Account</h1>
+                    <p class="subtitle" id="account-type">Loading account details...</p>
+                </div>
+            </div>
+
+            <div class="purchase-container">
+                <div class="purchase-details">
+                    <div class="account-summary">
+                        <h2>Account Summary</h2>
+                        <div class="summary-details">
+                            <p>Account Type: <span id="summary-type">Loading...</span></p>
+                            <p>Price: <span id="summary-price">Loading...</span></p>
+                            <p>Stock: <span id="summary-stock">Loading...</span></p>
+                        </div>
+                    </div>
+
+                    <div class="payment-selection">
+                        <h2>Select Payment Method</h2>
+                        <div class="payment-options">
+                            <div class="payment-option" data-method="paypal">
+                                <i class="fab fa-paypal"></i>
+                                <span>PayPal</span>
+                            </div>
+                            <div class="payment-option" data-method="cashapp">
+                                <i class="fas fa-dollar-sign"></i>
+                                <span>CashApp</span>
+                            </div>
+                            <div class="payment-option" data-method="bitcoin">
+                                <i class="fab fa-bitcoin"></i>
+                                <span>Bitcoin</span>
+                            </div>
+                            <div class="payment-option" data-method="card">
+                                <i class="far fa-credit-card"></i>
+                                <span>Card</span>
+                            </div>
+                            <div class="payment-option" data-method="ethereum">
+                                <i class="fab fa-ethereum"></i>
+                                <span>Ethereum</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-forms">
+                        <!-- PayPal Form -->
+                        <div class="payment-form" id="paypal-form" style="display: none;">
+                            <div class="form-group">
+                                <input type="email" placeholder="PayPal Email" required>
+                            </div>
+                        </div>
+
+                        <!-- CashApp Form -->
+                        <div class="payment-form" id="cashapp-form" style="display: none;">
+                            <div class="form-group">
+                                <input type="text" placeholder="$Cashtag" required>
+                            </div>
+                        </div>
+
+                        <!-- Crypto Forms -->
+                        <div class="payment-form" id="crypto-form" style="display: none;">
+                            <div class="crypto-address">
+                                <p>Send exact amount to:</p>
+                                <div class="address-box">
+                                    <span id="crypto-address">Loading address...</span>
+                                    <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Form -->
+                        <div class="payment-form" id="card-form" style="display: none;">
+                            <div class="form-group">
+                                <input type="text" placeholder="Card Number" maxlength="16" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" placeholder="MM/YY" maxlength="5" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="CVV" maxlength="3" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="discord" placeholder="Discord Username" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email Address" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="purchase-actions">
+                        <button class="confirm-btn" id="confirm-purchase">
+                            <i class="fas fa-lock"></i> Confirm Purchase
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="purchase-footer">
+                <div class="security-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Instant Delivery</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-user-shield"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+    <script src="buy.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+:root {
+    --terminal-bg: #1a1b1e;
+    --card-bg: #22242a;
+    --terminal-text: #e4f0fb;
+    --sapphire-blue: #00a6ff;
+    --sapphire-glow: #00d9ff;
+    --discord-color: #5865F2;
+    --telegram-color: #0088cc;
+    --youtube-color: #FF0000;
+    --tiktok-color: #00f2ea;
+    --paypal-color: #003087;
+    --cashapp-color: #00D632;
+    --bitcoin-color: #F7931A;
+    --card-color: #ffc252;
+    --ethereum-color: #627EEA;
+    --googlepay-color: #4285f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1b1e 0%, #151618 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, var(--sapphire-blue), transparent);
+    opacity: 0.1;
+    border-radius: 40%;
+}
+
+.wave:nth-child(1) {
+    animation: wave 10s linear infinite;
+}
+
+.wave:nth-child(2) {
+    animation: wave 15s linear infinite;
+    opacity: 0.05;
+}
+
+.wave:nth-child(3) {
+    animation: wave 20s linear infinite;
+    opacity: 0.03;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.terminal-container {
+    width: 95%;
+    max-width: 1200px;
+    background: var(--terminal-bg);
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.terminal-header {
+    background: var(--card-bg);
+    padding: 15px 20px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminal-title {
+    color: var(--terminal-text);
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terminal-title i {
+    color: var(--sapphire-blue);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn i {
+    font-size: 8px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.btn:hover i {
+    opacity: 1;
+}
+
+.close { background: #ff5f57; }
+.minimize { background: #febc2e; }
+.maximize { background: #28c841; }
+
+.terminal-content {
+    padding: 30px;
+    color: var(--terminal-text);
+    position: relative;
+}
+
+.marketplace-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo i {
+    font-size: 3em;
+    color: var(--sapphire-blue);
+    margin-bottom: 15px;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--sapphire-blue);
+}
+
+.subtitle {
+    color: #8b8d91;
+    font-size: 1.1em;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.service-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    color: var(--sapphire-blue);
+    margin-bottom: 20px;
+}
+
+.service-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.service-card p {
+    color: #8b8d91;
+    margin-bottom: 20px;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #8b8d91;
+}
+
+.browse-btn {
+    margin-top: auto;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--sapphire-blue);
+    color: var(--sapphire-blue);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.browse-btn:hover {
+    background: var(--sapphire-blue);
+    color: var(--terminal-bg);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.social-icon {
+    font-size: 1.5em;
+    color: #8b8d91;
+    transition: 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icon.discord:hover { color: var(--discord-color); }
+.social-icon.telegram:hover { color: var(--telegram-color); }
+.social-icon.youtube:hover { color: var(--youtube-color); }
+.social-icon.tiktok:hover { color: var(--tiktok-color); }
+
+.payment-methods {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.payment-icon {
+    font-size: 1.3em;
+    color: #8b8d91;
+    transition: 0.3s ease;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.payment-icon.paypal:hover { color: var(--paypal-color); }
+.payment-icon.cashapp:hover { color: var(--cashapp-color); }
+.payment-icon.bitcoin:hover { color: var(--bitcoin-color); }
+.payment-icon.card:hover { color: var(--card-color); }
+.payment-icon.ethereum:hover { color: var(--ethereum-color); }
+.payment-icon.google-pay:hover { color: var(--googlepay-color); }
+
+.terminal-credits {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.credits-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.credits-content p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8b8d91;
+}
+
+.copyright {
+    text-align: center;
+    color: #8b8d91;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .credits-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .payment-methods {
+        position: relative;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        margin: 20px 0;
+    }
+}

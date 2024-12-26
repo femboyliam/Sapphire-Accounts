@@ -1,0 +1,235 @@
+.terminal-container.compact {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.back-button {
+    color: var(--terminal-text);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9em;
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    color: var(--sapphire-blue);
+}
+
+.purchase-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.purchase-logo i {
+    font-size: 2.5em;
+    color: var(--sapphire-blue);
+    margin-bottom: 10px;
+}
+
+.purchase-logo h1 {
+    font-size: 2em;
+    margin-bottom: 8px;
+    background: linear-gradient(45deg, var(--sapphire-blue), #60c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.purchase-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.purchase-details {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.account-summary h2, 
+.payment-selection h2,
+.contact-info h2 {
+    color: var(--terminal-text);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.summary-details p {
+    color: #8b8d91;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.summary-details span {
+    color: var(--sapphire-blue);
+    font-weight: 500;
+}
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.payment-option {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.payment-option:hover {
+    border-color: var(--sapphire-blue);
+    transform: translateY(-2px);
+}
+
+.payment-option.selected {
+    border-color: #00ff9d;
+    background: rgba(0, 255, 157, 0.1);
+}
+
+.payment-option.selected i,
+.payment-option.selected span {
+    color: #00ff9d;
+}
+
+.payment-option i {
+    font-size: 1.3em;
+    color: #8b8d91;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.payment-option span {
+    color: #8b8d91;
+    font-size: 0.85em;
+}
+
+.payment-forms {
+    margin-bottom: 25px;
+}
+
+.payment-form {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: var(--terminal-text);
+    transition: 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--sapphire-blue);
+    outline: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.crypto-address {
+    text-align: center;
+}
+
+.address-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: var(--sapphire-blue);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.copy-btn:hover {
+    color: #00ff9d;
+}
+
+.confirm-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--sapphire-blue);
+    color: var(--terminal-bg);
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background: #0088cc;
+    transform: translateY(-2px);
+}
+
+.security-badges {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8b8d91;
+    font-size: 0.9em;
+}
+
+.badge i {
+    color: var(--sapphire-blue);
+}
+
+@media (max-width: 768px) {
+    .payment-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .security-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

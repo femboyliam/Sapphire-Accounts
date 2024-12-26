@@ -1,0 +1,185 @@
+.back-button {
+    color: var(--terminal-text);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9em;
+    transition: 0.3s ease;
+}
+
+.back-button:hover {
+    color: var(--sapphire-blue);
+}
+
+.rust-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rust-logo i {
+    font-size: 3em;
+    color: #cd412b;
+    margin-bottom: 15px;
+}
+
+.rust-logo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #cd412b, #ff7659);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rust-accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.account-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--sapphire-blue);
+    box-shadow: 0 5px 15px rgba(0, 166, 255, 0.1);
+}
+
+.account-banner {
+    background: linear-gradient(45deg, #1e2124, #2f3136);
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hours-badge {
+    background: #cd412b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.stock-badge {
+    background: var(--sapphire-blue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.account-details {
+    padding: 20px;
+}
+
+.account-details h2 {
+    color: var(--terminal-text);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.account-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.account-features li {
+    color: #8b8d91;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-features li i {
+    color: #00ff9d;
+    font-size: 0.9em;
+}
+
+.account-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price {
+    color: var(--sapphire-blue);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid var(--sapphire-blue);
+    color: var(--sapphire-blue);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.buy-btn:hover {
+    background: var(--sapphire-blue);
+    color: var(--terminal-bg);
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.payment-icon {
+    font-size: 1.5em;
+    color: #8b8d91;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.payment-icon.paypal:hover { color: var(--paypal-color); }
+.payment-icon.cashapp:hover { color: var(--cashapp-color); }
+.payment-icon.bitcoin:hover { color: var(--bitcoin-color); }
+.payment-icon.card:hover { color: var(--card-color); }
+.payment-icon.ethereum:hover { color: var(--ethereum-color); }
+
+@media (max-width: 1200px) {
+    .rust-accounts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .rust-accounts-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .account-banner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .account-price {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .buy-btn {
+        width: 100%;
+    }
+}
